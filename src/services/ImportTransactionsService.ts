@@ -7,8 +7,6 @@ import uploadConfig from '../config/upload';
 import Transaction from '../models/Transaction';
 import Category from '../models/Category';
 
-import CreateTransactionService from './CreateTransactionService';
-
 interface CSVTransaction {
   title: string;
   type: 'income' | 'outcome';

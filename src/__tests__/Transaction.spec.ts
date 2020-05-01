@@ -18,7 +18,7 @@ describe('Transaction', () => {
 
   beforeEach(async () => {
     await connection.query('DELETE FROM transactions');
-    await connection.query('DELETE FROM category');
+    await connection.query('DELETE FROM categories');
   });
 
   afterAll(async () => {
