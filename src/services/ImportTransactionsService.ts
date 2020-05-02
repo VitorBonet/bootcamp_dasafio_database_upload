@@ -26,7 +26,7 @@ class ImportTransactionsService {
     const transactionsArr: CSVTransaction[] = [];
     const categoriesArr: string[] = [];
 
-    const jsonCSV = await csv().fromFile(filepath);
+    const jsonCSV = await csv({ trim: true }).fromFile(filepath);
 
     await jsonCSV.map(async row => {
       if (!row.title || !row.type || !row.value || !row.category) {
