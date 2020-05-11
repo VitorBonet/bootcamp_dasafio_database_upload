@@ -51,7 +51,7 @@ export default class CreateCategoryAndTransaction1587340113982
 
     await queryRunner.createTable(
       new Table({
-        name: 'category',
+        name: 'categories',
         columns: [
           {
             name: 'id',
