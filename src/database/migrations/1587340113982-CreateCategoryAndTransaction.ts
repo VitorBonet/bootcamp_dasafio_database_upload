@@ -84,7 +84,7 @@ export default class CreateCategoryAndTransaction1587340113982
         name: 'TransactionsCategory',
         columnNames: ['category_id'],
         referencedColumnNames: ['id'],
-        referencedTableName: 'category',
+        referencedTableName: 'categories',
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
       }),
@@ -92,9 +92,9 @@ export default class CreateCategoryAndTransaction1587340113982
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('appointments', 'AppointmentProvider');
+    await queryRunner.dropForeignKey('transactions', 'TransactionsCategory');
 
-    await queryRunner.dropTable('category');
+    await queryRunner.dropTable('categories');
 
     await queryRunner.dropTable('transactions');
   }
